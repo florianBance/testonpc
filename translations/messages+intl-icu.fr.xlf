@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="tuhf.TN" resname="article_created">
+        <source>article_created</source>
+        <target>Article créé</target>
+      </trans-unit>
+      <trans-unit id="EOjc8TC" resname="article_updated_success_message">
+        <source>article_updated_success_message</source>
+        <target>Article mis à jour</target>
+      </trans-unit>
+      <trans-unit id="qbiDhYU" resname="success_message_article_deleted">
+        <source>success_message_article_deleted</source>
+        <target>Article supprimé</target>
+      </trans-unit>
+      <trans-unit id="sZYFKkl" resname="Veuillez uploader un fichier valide.">
+        <source>Veuillez uploader un fichier valide.</source>
+        <target>Veuillez uploader un fichier valide.</target>
+      </trans-unit>
+      <trans-unit id="b68_iN1" resname="Editer un article">
+        <source>Editer un article</source>
+        <target>Editer un article</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="APnFM0V" resname="Ajouter">
+        <source>Ajouter</source>
+        <target>Ajouter</target>
+      </trans-unit>
+      <trans-unit id="pWFFJwz" resname="id">
+        <source>id</source>
+        <target>id</target>
+      </trans-unit>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="IumSuye" resname="Editer">
+        <source>Editer</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="Xl0CFs4" resname="Supprimer">
+        <source>Supprimer</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="dfWlBpq" resname="Etes-vous sûr de vouloir supprimer ce article ?">
+        <source>Etes-vous sûr de vouloir supprimer ce article ?</source>
+        <target>Etes-vous sûr de vouloir supprimer ce article ?</target>
+      </trans-unit>
+      <trans-unit id="ClLktkm" resname="Créer un nouvel article">
+        <source>Créer un nouvel article</source>
+        <target>Créer un nouvel article</target>
+      </trans-unit>
+      <trans-unit id="eOeSABC" resname="Titre">
+        <source>Titre</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="u7C9X.V" resname="Texte">
+        <source>Texte</source>
+        <target>Texte</target>
+      </trans-unit>
+      <trans-unit id="GqTLC8y" resname="Image">
+        <source>Image</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit id="zQOGHw." resname="slug">
+        <source>slug</source>
+        <target>slug</target>
+      </trans-unit>
+      <trans-unit id="Rq05Fva" resname="Annuler">
+        <source>Annuler</source>
+        <target>Annuler</target>
+      </trans-unit>
+      <trans-unit id="ZueFPKN" resname="Continue reading">
+        <source>Continue reading</source>
+        <target>Continuer la lecture</target>
+      </trans-unit>
+      <trans-unit id="OEuuY_W" resname="Aucun article à afficher">
+        <source>Aucun article à afficher</source>
+        <target>Aucun article à afficher</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
