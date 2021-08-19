@@ -1,0 +1,41 @@
+{{ form_start(articleForm, {'attr': {'novalidate':'novalidate'}}) }}
+
+<div class="formContainer">
+    <div class="form-group">
+        {{ form_label(articleForm.title, "Titre"|trans,{'label_attr': {'class': 'label'}}) }}
+        {{ form_errors(articleForm.title) }}
+        {{ form_widget(articleForm.title, {'attr': {'class': 'form-control-lg form-control mb-3'}}) }}
+        {{ form_help(articleForm.title) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(articleForm.text, "Texte"|trans,{'label_attr': {'class': 'label'}}) }}
+        {{ form_errors(articleForm.text) }}
+        {{ form_widget(articleForm.text, {'attr': {'class': 'form-control-lg form-control mb-3'}}) }}
+        {{ form_help(articleForm.text) }}
+    </div>
+    {% if route_name=='article_edit' %}
+        <div class="form-group">
+            <img class="img-thumbnail" src="{{ asset('uploads/medias/'~ article.media) }}" alt="image">
+        </div>
+    {% endif %}
+    <div class="form-group">
+        {{ form_label(articleForm.media, "Image"|trans,{'label_attr': {'class': 'label'}}) }}
+        {{ form_errors(articleForm.media) }}
+        {{ form_widget(articleForm.media, {'attr': {'class': 'form-control-lg form-control mb-3'}}) }}
+        {{ form_help(articleForm.media) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(articleForm.slug, "slug"|trans,{'label_attr': {'class': 'label'}}) }}
+        {{ form_errors(articleForm.slug) }}
+        {{ form_widget(articleForm.slug, {'attr': {'class': 'form-control-lg form-control mb-3'}}) }}
+        {{ form_help(articleForm.slug) }}
+    </div>
+
+    <div class="button-container">
+        <button type="submit" class="btn btn-general btn-general-secondary mt-3 mb-3 mx-auto">{{ button_text|trans }}</button>
+        <a href="{{ path('article_list') }}" class="btn btn-general btn-general-tertiary ">{% trans %}Annuler{% endtrans %}</a>
+    </div>
+</div>
+
+
+{{ form_end(articleForm) }}

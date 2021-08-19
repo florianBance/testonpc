@@ -1,0 +1,35 @@
+{% extends 'content_base.html.twig' %}
+{% block title %}
+    {% trans %}Créer un nouvel article{% endtrans %}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+{% endblock %}
+{% block content_body %}
+    <style>
+        .jumbotron{width: 100%;}
+    </style>
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark d-inline-block">
+        <div class="col-md-6 float-left">
+            <h1 class="display-4 font-italic">{{ article.title }}</h1>
+            <p class="lead my-3">{{ article.text }}</p>
+            {% if route_name=="article_show" %}
+            <div class="">
+                <img class="card-img-right flex-auto d-none d-md-block" src="{{ asset('uploads/medias/'~ article.media) }}"
+                     alt="Card image cap">
+            </div>
+            {% endif %}
+        </div>
+        {% if route_name=="article_show_front" %}
+        <div class="col-md-6 float-right">
+            <img class="card-img-right flex-auto d-none d-md-block" src="{{ asset('uploads/medias/'~ article.media) }}"
+                 alt="Card image cap">
+        </div>
+        {% endif %}
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'content_base.html.twig' %}
+{% block title %}
+    {% trans %}Contact{% endtrans %}
+{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/theme.bootstrap_4.min.css') }}">
+{% endblock%}
+{% block content_body %}
+    <div class="button-container">
+        <a href="{{ path('article_new') }}" class="btn btn-general btn-general-secondary mt-3 mb-3 mx-auto ">{% trans %}Ajouter{% endtrans %}
+            <span class="float-right pictoContainer">
+                <i class="bi bi-plus-square"></i>
+            </span>
+        </a>
+    </div>
+    <table class="table table-hover" id="allformationLocation">
+        <thead>
+        <tr>
+            <th>{% trans %}id{% endtrans %}</th>
+            <th>{% trans %}title{% endtrans %}</th>
+            <th class="actions">{% trans %}Actions{% endtrans %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td>
+                    {{ article.id }}
+                </td>
+                <td><a href="{{ path('article_show',{"id": article.id}) }}">{{ article.title }}</a></td>
+                <td>
+                    <a class="tableButton"  title="{% trans %}Editer{% endtrans %}" href="{{ path('article_edit',{"id": article.id}) }}">
+                        edit
+                    </a>
+                     /
+                    <a class="tableButton" title="{% trans %}Supprimer{% endtrans %}" href="{{ path('article_delete',{"id": article.id}) }}" onclick="return confirm('{% trans %}Etes-vous sûr de vouloir supprimer ce article ?{% endtrans %}');">
+                        Suppprimer
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'content_base.html.twig' %}
+{% block title %}
+    {% trans %}Contact{% endtrans %}
+{% endblock %}
+ {% block stylesheets %}
+     {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/theme.bootstrap_4.min.css') }}">
+{% endblock%}
+{% block content_body %}
+    <div class="row mb-2">
+        <!-- Liste des articles du blog -- DEBUT -->
+        {% if articles|length>0 %}
+            {% for article in articles %}
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h3 class="mb-0">
+                                <a class="text-dark" href="{{ path('article_show_front',{'slug': article.slug}) }}">{{ article.title }}</a>
+                            </h3>
+                            <div class="mb-1 text-muted">{{ article.creationDate|date('M d') }}</div>
+                            <p class="card-text mb-auto">{{ article.text|length>50 ? article.text|slice(0, 50) ~ '...' : article.text  }} </p>
+                            <a href="{{ path('article_show_front',{'slug': article.slug}) }}">{% trans %}Continue reading{% endtrans %}</a>
+                        </div>
+                        <img class="card-img-right flex-auto d-none d-md-block" src="{{ asset('uploads/medias/'~ article.media) }}" alt="Card image cap">
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% trans %}Aucun article à afficher{% endtrans %}
+        {% endif %}
+        <!-- Liste des articles du blog -- FIN -->
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
