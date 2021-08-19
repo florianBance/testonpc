@@ -42,7 +42,3 @@ Valider et mettre à jour Base de donnée
  ```
  php bin/console doctrine:migrations:migrate
  ```
-Charger fixtures par raport au fichier brut csv
- ```
- php bin/console doctrine:fixtures:load
- ```
