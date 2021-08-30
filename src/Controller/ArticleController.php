@@ -63,7 +63,6 @@ class ArticleController extends BaseController
             }
 
 
-            $article->setSlug($article->getId()."-".$article->getSlug());
 
             $em->persist($article);
             $em->flush();
